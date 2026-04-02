@@ -1,0 +1,96 @@
+/* =========================
+   ROOT VARIABLES (THEME)
+   ========================= */
+
+:root {
+  --primary-color: #1abc9c; /* teal from logo */
+  --dark-color: #1f2d3d; /* dark blue/charcoal */
+  --light-color: #f4f6f8; /* soft background */
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+/* =========================
+   GLOBAL RESET & BASE
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+/* Header */
+
+header {
+  background-color: var(--dark-color);
+  color: var(--white);
+  padding: 10px;
+  text-align: center;
+}
+
+header img {
+  width: 80px;
+  vertical-align: middle;
+}
+
+/* NAVIGATION  */
+
+nav {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section  */
+.hero {
+  background-image: url("../images/smartShopHERO.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+/* Button styled using brand colors  */
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #17a589;
+}
+
+/* Footer */
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #17a589;
+}
