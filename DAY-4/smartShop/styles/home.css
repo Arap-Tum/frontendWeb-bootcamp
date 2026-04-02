@@ -1,0 +1,265 @@
+/* =========================
+   ROOT VARIABLES (THEME)
+   ========================= */
+
+:root {
+  --primary-color: #1abc9c; /* teal from logo */
+  --dark-color: #1f2d3d; /* dark blue/charcoal */
+  --light-color: #f4f6f8; /* soft background */
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+/* =========================
+   GLOBAL RESET & BASE
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+/* Header */
+
+.header {
+  position: sticky; /* stays at top */
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;
+
+  background: rgba(31, 45, 61, 0.9); /* glass effect */
+  backdrop-filter: blur(10px); /* modern blur */
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image */
+.logo img {
+  width: 45px; /* smaller = modern */
+  height: auto;
+}
+
+/* Brand name */
+.logo h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   TABLET+
+   ========================================= */
+
+@media (min-width: 768px) {
+  .header {
+    padding: 15px 40px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .logo img {
+    width: 55px;
+  }
+}
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 15px 60px;
+  }
+}
+/* NAVIGATION  */
+
+nav {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section  */
+.hero {
+  background-image: url("../images/smartShopHERO.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+/* Button styled using brand colors  */
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #17a589;
+}
+
+/* Footer */
+
+/* =========================================
+   MOBILE-FIRST IMPROVEMENTS (BASE ENHANCEMENTS)
+   ========================================= */
+
+/* Ensure proper scaling on all devices */
+* {
+  box-sizing: border-box;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve header layout on small screens */
+header {
+  display: flex;
+  flex-direction: column; /* stack logo + title */
+  align-items: center;
+  gap: 5px;
+}
+
+/* Navigation: stack links on small devices */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav a {
+  display: block;
+}
+
+/* Hero text scaling for small screens */
+.hero h2 {
+  font-size: 24px; /* smaller default for mobile */
+}
+
+.hero p {
+  font-size: 14px;
+}
+
+/* Improve button usability on mobile */
+button {
+  width: 100%; /* full width on mobile */
+  max-width: 250px;
+  margin-top: 10px;
+}
+
+/* =========================================
+   TABLET DEVICES (>= 768px)
+   ========================================= */
+
+@media (min-width: 768px) {
+  /* Header becomes horizontal */
+  header {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Navigation becomes horizontal */
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    display: inline-block;
+  }
+
+  /* Increase hero spacing */
+  .hero {
+    padding: 120px 40px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Button no longer full width */
+  button {
+    width: auto;
+  }
+}
+
+/* =========================================
+   DESKTOP DEVICES (>= 1024px)
+   ========================================= */
+
+@media (min-width: 1024px) {
+  /* Larger hero for desktop */
+  .hero {
+    padding: 150px 60px;
+  }
+
+  .hero h2 {
+    font-size: 40px; /* restore large heading */
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* Limit content width for better readability */
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================
+   LARGE SCREENS (>= 1400px)
+   ========================================= */
+
+@media (min-width: 1400px) {
+  .hero {
+    padding: 180px 80px;
+  }
+}
