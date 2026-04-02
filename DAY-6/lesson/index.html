@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #1f2d3d;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      section {
+        background: white;
+        padding: 15px;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #1abc9c;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript Basics</h1>
+      <p>JavaScript adds brains to the website 🧠</p>
+    </header>
+
+    <!-- VARIABLES -->
+    <section>
+      <h2>Variables</h2>
+      <p>Variables store information that JavaScript can use later.</p>
+
+      <button onclick="showVariables()">Show Variables</button>
+      <p id="variablesOutput"></p>
+    </section>
+
+    <!-- ARRAYS -->
+    <section>
+      <h2>Arrays</h2>
+      <p>Arrays store multiple values in a single variable.</p>
+
+      <button onclick="showArray()">Show Array</button>
+      <p id="arrayOutput"></p>
+    </section>
+
+    <!-- OBJECTS -->
+    <section>
+      <h2>Objects</h2>
+      <p>Objects store related information using key-value pairs.</p>
+
+      <button onclick="showObject()">Show Object</button>
+      <p id="objectOutput"></p>
+    </section>
+
+    <!-- FUNCTIONS -->
+    <section>
+      <h2>Functions</h2>
+      <p>Functions are reusable blocks of code.</p>
+
+      <button onclick="greetUser()">Run Function</button>
+      <p id="functionOutput"></p>
+    </section>
+
+    <!-- CONSOLE -->
+    <section>
+      <h2>Console</h2>
+      <p>
+        The console is used by developers to debug and see messages. Open
+        DevTools → Console to see the logs.
+      </p>
+
+      <button onclick="showConsole()">Log to Console</button>
+    </section>
+
+    <script>
+      /* =========================
+         VARIABLES
+      ========================= */
+
+      let name = "Jamleck";
+      let age = 23;
+
+      function showVariables() {
+        document.getElementById("variablesOutput").textContent =
+          "Name: " + name + ", Age: " + age;
+      }
+
+      /* =========================
+         ARRAYS
+      ========================= */
+
+      let languages = ["HTML", "CSS", "JavaScript"];
+
+      function showArray() {
+        document.getElementById("arrayOutput").textContent =
+          "Languages I am learning: " + languages.join(", ");
+      }
+
+      /* =========================
+         OBJECTS
+      ========================= */
+
+      let student = {
+        name: "Jamleck",
+        course: "Web Development",
+        level: "Beginner",
+      };
+
+      function showObject() {
+        document.getElementById("objectOutput").textContent =
+          student.name +
+          " is studying " +
+          student.course +
+          " (" +
+          student.level +
+          ")";
+      }
+
+      /* =========================
+         FUNCTIONS
+      ========================= */
+
+      function greetUser() {
+        document.getElementById("functionOutput").textContent =
+          "Hello! Welcome to JavaScript learning.";
+      }
+
+      /* =========================
+         CONSOLE
+      ========================= */
+
+      function showConsole() {
+        console.log("This message appears in the browser console.");
+        console.log("Student Object:", student);
+      }
+    </script>
+  </body>
+</html>

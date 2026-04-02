@@ -1,0 +1,165 @@
+/* =========================
+   ROOT VARIABLES (THEME)
+   ========================= */
+
+:root {
+  --primary-color: #1abc9c; /* teal from logo */
+  --dark-color: #1f2d3d; /* dark blue/charcoal */
+  --light-color: #f4f6f8; /* soft background */
+  --text-color: #333;
+  --white: #ffffff;
+}
+
+/* =========================
+   GLOBAL RESET & BASE
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+/* Header */
+
+.header {
+  position: sticky; /* stays at top */
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;
+
+  background: rgba(31, 45, 61, 0.9); /* glass effect */
+  backdrop-filter: blur(10px); /* modern blur */
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image */
+.logo img {
+  width: 45px; /* smaller = modern */
+  height: auto;
+}
+
+/* Brand name */
+.logo h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   TABLET+
+   ========================================= */
+
+@media (min-width: 768px) {
+  .header {
+    padding: 15px 40px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .logo img {
+    width: 55px;
+  }
+}
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 15px 60px;
+  }
+}
+/* NAVIGATION  */
+
+nav {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Button styled using brand colors  */
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #17a589;
+}
+
+/* =========================
+   PRODUCTS PAGE STYLES
+   ========================= */
+
+.section-title {
+  text-align: center;
+  margin: 30px 0;
+  color: var(--dark-color);
+}
+
+/* Product grid layout */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual product card */
+.product-card {
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Product images */
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Price styling */
+.price {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 10px 0;
+}
