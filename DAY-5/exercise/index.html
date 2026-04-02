@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Counter App</title>
+  </head>
+  <body>
+    <h1>Open the console to see the Counter App</h1>
+
+    <script>
+      console.log("=== Counter App ===");
+
+      // ==========================================
+      // VARIABLES
+      // Store simple values
+      // ==========================================
+      let count = 0;
+
+      console.log("Initial Count:", count);
+
+      // ==========================================
+      // OBJECT
+      // Represents our counter system
+      // ==========================================
+      let counter = {
+        value: 0,
+      };
+
+      console.log("Counter Object:", counter);
+
+      // ==========================================
+      // ARRAY
+      // Keeps history of changes
+      // ==========================================
+      let history = [];
+
+      // ==========================================
+      // FUNCTIONS
+      // Actions that change the counter
+      // ==========================================
+
+      // Increase counter
+      function increment() {
+        counter.value = counter.value + 1;
+
+        // save history
+        history.push(counter.value);
+
+        console.log("Incremented:", counter.value);
+      }
+
+      // Decrease counter
+      function decrement() {
+        counter.value = counter.value - 1;
+
+        // save history
+        history.push(counter.value);
+
+        console.log("Decremented:", counter.value);
+      }
+
+      // Reset counter
+      function reset() {
+        counter.value = 0;
+
+        // save history
+        history.push(counter.value);
+
+        console.log("Reset:", counter.value);
+      }
+
+      // Show current value
+      function showCount() {
+        console.log("Current Count:", counter.value);
+      }
+
+      // Show history
+      function showHistory() {
+        console.log("Counter History:", history);
+      }
+
+      // ==========================================
+      // RUNNING THE APP (SIMULATION)
+      // ==========================================
+
+      showCount();
+
+      increment();
+      increment();
+      decrement();
+      increment();
+      reset();
+      increment();
+
+      showCount();
+      showHistory();
+    </script>
+  </body>
+</html>
